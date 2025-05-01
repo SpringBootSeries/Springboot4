@@ -66,4 +66,12 @@ public class AppControllers {
     }
 
 
+    //find a student from the list by regNo
+    @GetMapping("/students/{regNo}")
+    public Student getStudentsReg(@PathVariable("regNo") String regNo )
+    {
+        return mstudents.get(regNo);
+    }
+
+
 }
