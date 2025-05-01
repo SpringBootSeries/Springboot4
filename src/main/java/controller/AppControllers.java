@@ -1,10 +1,7 @@
 package controller;
 
 import model.Student;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -73,5 +70,11 @@ public class AppControllers {
         return mstudents.get(regNo);
     }
 
+    @PostMapping("/add")
+    public String addStudent(@RequestBody Student student)
+    {
+        mstudents.put(student.getRegNo(),student);
+        return "New Student added";g
+    }
 
 }
