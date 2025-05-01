@@ -51,7 +51,12 @@ public class AppControllers {
         return "My Age is " +age;
     }
 
-
+    //a method  to return student
+    @GetMapping("/student")
+    public Student getStudent()
+    {
+        return s1;
+    }
 
 
 }
