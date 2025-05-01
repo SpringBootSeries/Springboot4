@@ -4,6 +4,11 @@ import model.Student;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/app")
 
@@ -14,4 +19,18 @@ public class AppControllers {
     Student s4 = new Student("2020ICt34","Chamari",25,"ICT",3.59);
     Student s5 = new Student("2020ICT67","Chawendra",30,"ITa",3.25);
 
+    private static List<Student> students = new  ArrayList<Student>();
+    private Map<String,Student> mstudents = new HashMap<String,Student>();
+
+
+    public AppControllers(){
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+        students.add(s4);
+        students.add(s5);
+
+
+
+    }
 }
