@@ -74,7 +74,7 @@ public class AppControllers {
     public String addStudent(@RequestBody Student student)
     {
         mstudents.put(student.getRegNo(),student);
-        return "New Student added";g
+        return "New Student added";
     }
 
 }
