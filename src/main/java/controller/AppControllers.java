@@ -1,6 +1,8 @@
 package controller;
 
 import model.Student;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,7 +32,26 @@ public class AppControllers {
         students.add(s4);
         students.add(s5);
 
+        mstudents.put(s1.getRegNo(),s1);
+        mstudents.put(s2.getRegNo(),s2);
+        mstudents.put(s3.getRegNo(),s3);
+        mstudents.put(s4.getRegNo(),s4);
+        mstudents.put(s5.getRegNo(),s5);
 
 
     }
+    @GetMapping("/msg")
+    public String Mymessage() {
+        return "Hello Spring Boot!";
+    }
+
+    @GetMapping("/age/{ag}")
+    public String myAge(@PathVariable("ag") int age)
+    {
+        return "My Age is " +age;
+    }
+
+
+
+
 }
