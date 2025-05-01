@@ -58,5 +58,12 @@ public class AppControllers {
         return s1;
     }
 
+    //return multiple students
+    @GetMapping("/students")
+    public Map<String,Student> getStudents()
+    {
+        return mstudents;
+    }
+g
 
 }
