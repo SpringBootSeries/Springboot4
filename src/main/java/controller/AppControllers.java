@@ -76,5 +76,19 @@ public class AppControllers {
         mstudents.put(student.getRegNo(),student);
         return "New Student added";
     }
+    @DeleteMapping("/students/{id}")
+    public String DeleteStudent(@PathVariable("id") String regno)
+    {
+        if (mstudents.get(regno) != null)
+        {
+            mstudents.remove(regno);
+            return "The student removed";
+
+        }
+        return "404 couldn't ind the student";
+
+    }
+
+
 
 }
